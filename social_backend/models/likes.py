@@ -1,12 +1,10 @@
+# models/likes.py
 import sqlite3
-
 DB = "social.db"
 
 def init_likes_table():
-    """Create the likes table if it doesn't exist"""
     conn = sqlite3.connect(DB)
     c = conn.cursor()
-
     c.execute("""
         CREATE TABLE IF NOT EXISTS likes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -14,6 +12,5 @@ def init_likes_table():
             post_id INTEGER
         )
     """)
-
     conn.commit()
     conn.close()
