@@ -2,4 +2,4 @@ fastapi
 uvicorn
 bcrypt
 python-multipart
-fastapi-vercel
+
